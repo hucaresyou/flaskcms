@@ -1,0 +1,53 @@
+{
+  "msgtype": "text", // 消息类型，可为 text、link、markdown、actionCard、feedCard
+  "msgUuid":"123",
+  "text": {
+    "content": "这是一条文本消息内容"
+  },
+  "link": {
+    "messageUrl": "https://www.example.com", // 跳转链接
+    "picUrl": "https://example.com/image.png", // 图片链接
+    "text": "这是一条链接消息内容", // 消息内容
+    "title": "链接消息标题" // 消息标题
+  },
+  "markdown": {
+    "title": "Markdown消息标题",
+    "text": "#### 这是Markdown消息内容 \n ![图片](https://example.com/image.png)"
+  },
+  "actionCard": {
+    "title": "ActionCard消息标题",
+    "text": "#### 这是ActionCard内容 \n ![图片](https://example.com/image.png)",
+    "btnOrientation": "0", // 0-按钮竖直排列，1-按钮横向排列
+    "singleTitle": "阅读全文", // 单个按钮标题
+    "singleURL": "https://www.example.com", // 单个按钮跳转链接
+    "btns": [
+      {
+        "title": "按钮1",
+        "actionURL": "https://www.example.com/btn1"
+      },
+      {
+        "title": "按钮2",
+        "actionURL": "https://www.example.com/btn2"
+      }
+    ]
+  },
+  "feedCard": {
+    "links": [
+      {
+        "title": "FeedCard标题1",
+        "messageURL": "https://www.example.com/1",
+        "picURL": "https://example.com/image1.png"
+      },
+      {
+        "title": "FeedCard标题2",
+        "messageURL": "https://www.example.com/2",
+        "picURL": "https://example.com/image2.png"
+      }
+    ]
+  },
+  "at": {
+    "isAtAll": false, // 是否@所有人
+    "atUserIds": ["user001", "user002"], // 被@的用户ID列表
+    "atMobiles": ["15xxx", "18xxx"] // 被@的手机号列表
+  }
+}
